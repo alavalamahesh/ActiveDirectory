@@ -1,5 +1,8 @@
 const AD = require('ad');
 var generator = require('generate-password');
+var addUser = require('./FusionDataLoad.js')
+
+console.log("Object having "+JSON.stringify(addUser.addUserObj))
 
 var password = generator.generate({
     length: 10,
@@ -8,8 +11,7 @@ var password = generator.generate({
     uppercase:true,
     strict:true
 });
- 
-console.log(password);
+ console.log(password);
 
 const ad = new AD({
     url: "ldaps://172.16.67.122",
